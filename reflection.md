@@ -4,9 +4,12 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 
 ## 1. What was broken when you started?
 
-- What did the game look like the first time you ran it?
-- List at least two concrete bugs you noticed at the start  
-  (for example: "the secret number kept changing" or "the hints were backwards").
+Attempts: You are allowed double the number of attempts communicated. I expected the game to end once I reached the required limit but instead it only ended when I reached double the limit. 
+Hints: The hints communicated opposite instructions in regards to the answer and submitted guess. For example answer: 59, guess: 56. In this scenerio I expected the hint to say go higher but instead I recieved the message to go lower. Similarly, with answer: 59, guess:60, I expected the hint to be go lower but instead I recieved the message to go higher.
+Hints: The toggle button only works before each new guess. You can't toggle the hint on and off freely anytime.
+'New Game' Button: I expect when I press New Game to be able to submit guesses again for this new game, however, I was not able to. This button only works while you are still in the middle of a game/have not used all your attempts and/or won the game.
+Range: If I am on a specific level that specifies a range of 1 to 50, I expect that the answer will be in that range, however, that was not the case. Answers where generated that were greater than 50.
+Range: The main page description of the game remains the same no matter what selected level I am on. For example the main page description remains Guess a number between 1 and 100 despite being on level Hard where the description in the side bar is Guess a number between 1 and 50. 
 
 ---
 
