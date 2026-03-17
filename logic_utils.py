@@ -1,3 +1,5 @@
+#FIX: Refactored logic into logic_utils.py using Copilot Agent mode)
+
 def get_range_for_difficulty(difficulty: str):
     """Return (low, high) inclusive range for a given difficulty."""
     if difficulty == "Easy":
@@ -31,7 +33,7 @@ def parse_guess(raw: str):
 
     return True, value, None
 
-
+#FIX: Refactored logic inverting direction hint for accuracy using Copilot Agent mode to idenify locatation)
 def check_guess(guess, secret):
     """
     Compare guess to secret and return (outcome, message).

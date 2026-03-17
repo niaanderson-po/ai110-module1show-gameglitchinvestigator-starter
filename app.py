@@ -43,7 +43,7 @@ if "history" not in st.session_state:
     st.session_state.history = []
 
 st.subheader("Make a guess")
-# FIXME: Logic breaks here
+#FIX: Refactored logic to reflect difficulty range rather than hardcoded 1-100using Copilot Agent mode to identify bug location)
 st.info(
     f"Guess a number between {low} and {high}. "
     f"Attempts left: {attempt_limit - st.session_state.attempts}"
