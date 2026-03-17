@@ -15,32 +15,29 @@ Range: The main page description of the game remains the same no matter what sel
 
 ## 2. How did you use AI as a teammate?
 
-- Which AI tools did you use on this project (for example: ChatGPT, Gemini, Copilot)?
-- Give one example of an AI suggestion that was correct (including what the AI suggested and how you verified the result).
-- Give one example of an AI suggestion that was incorrect or misleading (including what the AI suggested and how you verified the result).
+I used Claude Code on this project.
+An AI example that was correct was the location of the hard coded info box difficulty range display. I suggested to look at line 48. I verified this by reviwing that line 48 to see low, high previously stored from line 25: low, high = get_range_for_difficulty(difficulty) was not used. 
+An AI example that was incorrect was testing this very bug. At first it suggested testing get_range_for_difficulty soley but that is not where the issue lies. get_range_for_difficulty worked, the info box displaying get_range_for_difficulty didn't. I verified this was incorrect by reviewing the intial bug to compare if this test covered the code in full.
 
 ---
 
 ## 3. Debugging and testing your fixes
 
-- How did you decide whether a bug was really fixed?
-- Describe at least one test you ran (manual or using pytest)  
-  and what it showed you about your code.
-- Did AI help you design or understand any tests? How?
+I decided a bug was fixed if it passed a test I created and when I run the app, the feature is working as expected.
+I ran def test_guess_too_high() using pytest. It tested if secret is 50 and guess is 60, hint should be "Too High". It showed me that my code is now working as expected where it correctly hints the direction a user should go. Previously the was inverted stating "Too Low".
+AI helped my refactor this test since it was failing due to str vs tuple expection error. AI communicated how to resolve this issue. 
 
 ---
 
 ## 4. What did you learn about Streamlit and state?
 
-- In your own words, explain why the secret number kept changing in the original app.
-- How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit?
-- What change did you make that finally gave the game a stable secret number?
+The secret number kept changing in the app because with random.randint, it would generate a random number for that session. 
+To explain reruns and session state I would communicate that when an action is made the backend is rerun like a webpage is refreshed. A state saves the variable so it isnt reset in a rerun. 
+For me the secret number was always stable as it used session state. 
 
 ---
 
 ## 5. Looking ahead: your developer habits
-
-- What is one habit or strategy from this project that you want to reuse in future labs or projects?
-  - This could be a testing habit, a prompting strategy, or a way you used Git.
-- What is one thing you would do differently next time you work with AI on a coding task?
-- In one or two sentences, describe how this project changed the way you think about AI generated code.
+One habit from this project that I want to reuse in the future is standardized commit messages and testing!
+One thing I would do differently in working with AI is to ask for it to explain how a test will work in detail before providing a code snippet. 
+This project changed the way I think about AI generated code because it showed me how often a solution may be overcomplicated out outside of scope/issue at hand.
